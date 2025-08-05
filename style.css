@@ -1,0 +1,71 @@
+/* Google Font for a cute style */
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@500&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Kaisei Tokumin', serif;
+  background: url('bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #d97fae;
+  margin-bottom: 30px;
+  animation: fadeInDown 1s ease-out;
+}
+
+.link-list a {
+  display: block;
+  margin: 10px 0;
+  text-decoration: none;
+  font-size: 1.3em;
+  color: #fff;
+  background-color: #fcb0cc;
+  padding: 10px 20px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.link-list a:hover {
+  transform: scale(1.05);
+  background-color: #f38ca7;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
