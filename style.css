@@ -1,5 +1,8 @@
-/* Google Font for a cute style */
 @import url('https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@500&display=swap');
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -11,24 +14,32 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  text-align: center;
 }
 
+/* Main container */
 .container {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.85);
   padding: 40px;
   border-radius: 20px;
-  text-align: center;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 600px;
 }
 
+/* Heading */
 h1 {
   font-size: 2.5em;
   color: #d97fae;
   margin-bottom: 30px;
   animation: fadeInDown 1s ease-out;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
+/* Link list styles */
 .link-list a {
   display: block;
   margin: 10px 0;
@@ -67,5 +78,21 @@ h1 {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  .link-list a {
+    font-size: 1.1em;
+    padding: 10px;
   }
 }
